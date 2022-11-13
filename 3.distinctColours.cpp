@@ -1,27 +1,26 @@
-//codechef question : 
-//https://www.codechef.com/problems/DISTINCTCOL
-
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
 	int t, n;
+	cin >> t;
 	
 	for (int i=0; i<t; i++){
 	    cin >> n;
-	    int arr[n+1];
-	    arr[0]=0;
+	    
+	    int A[n+1];
+	    A[0]=INT_MIN;
 	    
 	    for (int j=0; j<n; j++){
-	        cin >> arr[j+1];      //input in array
+	        cin >> A[j+1];      //input in array
 	        
 	        //if any element is greater than 0th element
-	        if(arr[j+1] > arr[0]) {
-	            arr[0] = arr[j+1];
+	        if(A[j+1] > A[0]) {
+	            A[0] = A[j+1];
 	        }
 	    }
 	    
-	    cout << arr[0] <<endl;
+	    cout << A[0] <<endl;
 	}
 	return 0;
 }
