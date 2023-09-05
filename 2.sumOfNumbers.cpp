@@ -29,7 +29,5 @@ int main() {
         cout << sum << endl;
     }
 
-    cout << "chup bc" <<endl;
-
     return 0;
 }
